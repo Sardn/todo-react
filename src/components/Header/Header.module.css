@@ -1,0 +1,9 @@
+.header_container {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.header_title {
+  font-size: 3rem;
+  font-weight: 400;
+}
