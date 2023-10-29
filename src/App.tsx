@@ -1,20 +1,9 @@
 import React from 'react';
-
 import { Header, TodoPanel, TodoList } from './components';
 
 import styles from './App.module.css';
 
-const defaultTodo = [
-  { id: 1, name: 'task 1', description: 'description 1', checked: false },
-  // { id: 2, name: 'task 2', description: 'description 2', checked: false },
-  // {
-  //   id: 3,
-  //   name: 'task 3',
-  //   description:
-  //     'so long task description 3 so long task description so long task description so long task description so long task description',
-  //   checked: true
-  // }
-];
+const defaultTodo = [{ id: 1, name: 'task 1', description: 'description 1', checked: false }];
 
 export const App = () => {
   const [todoIdForEdit, setTodoIdForEdit] = React.useState<number | null>(null);
@@ -25,7 +14,7 @@ export const App = () => {
   };
 
   const deleteTodo = (id: Todo['id']) => {
-    setTodos(todos.filter((todo: { id: number; }) => todo.id !== id));
+    setTodos(todos.filter((todo: { id: number }) => todo.id !== id));
   };
 
   const addTodo = ({ name, description }: Omit<Todo, 'id' | 'checked'>) => {
